@@ -7,13 +7,7 @@ SRCS =  ft_atoi.c    ft_itoa.c       ft_calloc.c  ft_isalnum.c \
 		ft_memset.c  ft_memcpy.c     ft_memmove.c ft_memchr.c \
 		ft_strjoin.c ft_substr.c     ft_strtrim.c ft_strncmp.c \
 		ft_strmapi.c ft_striteri.c   ft_split.c   ft_putstr_fd.c \
-
-		
-		
-LST = 	ft_lstnew.c      ft_lstadd_front.c ft_lstsize.c \
-		ft_lstlast.c     ft_lstdelone.c    ft_lstiter.c \
-		ft_lstadd_back.c ft_lstclear.c     ft_lstmap.c \
-		 
+	 
 NAME = libft.a
 
 COMPRESS = ar rcs
@@ -22,11 +16,9 @@ RM = rm -rf
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 OBJS = $(SRCS:.c=.o)
-
-BONUS_OBJS = $(LST:.c=.o)
 
 all: $(NAME)
 
@@ -36,16 +28,13 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(COMPRESS) $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS) $(NAME)
-	@$(COMPRESS) $(NAME) $(BONUS_OBJS)
-
 clean:
-	@$(RM) $(OBJS) $(BONUS_OBJS)
+	@$(RM) $(OBJS) 
 
 fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all fclean clean re bonus
+.PHONY: all fclean clean 
  

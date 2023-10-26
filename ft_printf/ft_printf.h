@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:16:56 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/21 19:14:53 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:24:00 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ int	ft_print_str(char *s);
 int	ft_print_num(long int n);
 int	ft_print_point(unsigned long int p);
 int	ft_putbase(unsigned long int n, char *base, int count);
-//int	ft_putnbr_base(unsigned long int n, char *base, int count);
 
 #endif

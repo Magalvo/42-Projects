@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:16:58 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/23 16:14:31 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/24 12:28:17 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	ft_printf(const char *s, ...)
 
 /* int	main()
 {
-	int i = -42;
+	 int i = -42;
 	void *p = (int *)101010;
 	char c = 'c';
 	char s[] = "Stingrid";
@@ -128,11 +128,9 @@ int	ft_printf(const char *s, ...)
 	printf("Original count: %d, My count: %d\n\n", count1, count2);
 
 	// %% (Percentage OF %)
-	count1 = printf("This is This :%%:\n");
-	count2 = ft_printf("This is This :%%:\n");
-
-	printf('%');
-	ft_printf('%');
-	
+	count1 = printf("This is This :% .ca:\n");
+	count2 = ft_printf("This is This :% .ca:\n");
+	printf("Original count: %d, My count: %d\n\n", count1, count2);
+	return (0);
 } 
- */
+  */

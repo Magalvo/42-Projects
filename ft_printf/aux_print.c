@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 14:53:34 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/23 11:32:13 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:25:22 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,6 @@ int	ft_putbase(unsigned long int n, char *base, int count)
 	}
 	return (count);
 }
-
-/* int	ft_putbase(unsigned long int n, char *base)
-{
-	int count;
-
-	count = 0;
-	if (n == 0)
-		count += ft_putchar_fd('0', 1);
-	else
-		count += ft_putnbr_base(n, base, count);
-	return (count);
-} */
 
 int	ft_print_point(unsigned long int p)
 {

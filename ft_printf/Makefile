@@ -6,7 +6,7 @@
 #    By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/21 12:16:06 by dde-maga          #+#    #+#              #
-#    Updated: 2023/10/23 17:04:25 by dde-maga         ###   ########.fr        #
+#    Updated: 2023/10/24 12:23:31 by dde-maga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ COMPRESS = ar rcs
 
 RM = rm -rf
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror 
 
 CC = cc
 
@@ -26,26 +26,26 @@ OBJS = $(SRCS:.c=.o)
 
 LIBFTDIR = ./libft
 
-LIBFT = $(LIBFTDIR)/libft.a
+LIBFT = $(LIBFTDIR)libft.a
 
 all: $(NAME)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME): $(OBJS) $(LIBFT)
+$(NAME): $(LIBFT) $(OBJS)
 	@$(COMPRESS) $(NAME) $(OBJS) libft/*.o
 
 $(LIBFT):
-	@make -C $(LIBFTDIR) --no-print-directory
+	@$(MAKE) -C $(LIBFTDIR) --no-print-directory
 
 clean:
 	@$(RM) $(OBJS)
-	@make clean -C $(LIBFTDIR) clean --no-print-directory
+	@$(MAKE) -C $(LIBFTDIR) clean --no-print-directory
 
 fclean: clean
-	@$(RM) $(NAME)
-	@make fclean -C $(LIBFTDIR) fclean --no-print-directory
+	@$(RM) $(NAME) ft_printf
+	@$(MAKE) -C $(LIBFTDIR) fclean --no-print-directory
 
 re: fclean all
 
