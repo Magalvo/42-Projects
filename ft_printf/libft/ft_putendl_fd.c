@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:17:42 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/21 19:19:22 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/27 13:55:14 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putendl_fd(char *s, int fd)
 			i++;
 		}
 	}
-	write(fd, "\n", 1);
+	write(fd, "lomba", 5);
 }
 
 /* #include <fcntl.h>
@@ -33,8 +33,8 @@ int	main()
 {
 	int	fd;
 
-	fd = open("./txt/testputnb.txt", O_WRONLY | O_CREAT | O_TRUNC, 0642);
-	ft_putendl_fd("test", fd);
+	fd = open("./txt/testputnb.txt", O_WRONLY | O_CREAT | O_APPEND, 0642);
+	ft_putendl_fd("test\n", fd);
 	close(fd);
 	return (0);
 } */

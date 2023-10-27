@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:40:21 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/21 19:22:23 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:43:11 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static size_t	ft_wordctd(const char *str, char c, char ***splits)
 		start = i;
 		while (str[i] != c && str[i])
 			i++;
-		if (*splits && ctd > 0 && i != start)
+		if (*splits && ctd > 0 && i != start) 
 			(*splits)[ctd - 1] = ft_substr(str, start, i - start);
 		if (*splits && ctd && !(*splits)[ctd - 1])
 		{

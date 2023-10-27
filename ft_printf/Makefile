@@ -6,7 +6,7 @@
 #    By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/21 12:16:06 by dde-maga          #+#    #+#              #
-#    Updated: 2023/10/24 12:23:31 by dde-maga         ###   ########.fr        #
+#    Updated: 2023/10/27 12:47:30 by dde-maga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJS = $(SRCS:.c=.o)
 
 LIBFTDIR = ./libft
 
-LIBFT = $(LIBFTDIR)libft.a
+LIBFT = $(LIBFTDIR)/libft.a
 
 all: $(NAME)
 
@@ -49,4 +49,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all fclean clean re
+.PHONY: all fclean clean re	

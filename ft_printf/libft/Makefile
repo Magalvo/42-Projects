@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/10/27 13:05:25 by dde-maga          #+#    #+#              #
+#    Updated: 2023/10/27 13:06:27 by dde-maga         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRCS =  ft_atoi.c    ft_itoa.c       ft_calloc.c  ft_isalnum.c \
 		ft_isalpha.c ft_isascii.c    ft_isupper.c ft_isdigit.c \
 	    ft_isprint.c ft_strlen.c     ft_islower.c ft_toupper.c \
@@ -7,7 +19,8 @@ SRCS =  ft_atoi.c    ft_itoa.c       ft_calloc.c  ft_isalnum.c \
 		ft_memset.c  ft_memcpy.c     ft_memmove.c ft_memchr.c \
 		ft_strjoin.c ft_substr.c     ft_strtrim.c ft_strncmp.c \
 		ft_strmapi.c ft_striteri.c   ft_split.c   ft_putstr_fd.c \
-	 
+		
+		 
 NAME = libft.a
 
 COMPRESS = ar rcs
@@ -16,9 +29,11 @@ RM = rm -rf
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJS = $(LST:.c=.o)
 
 all: $(NAME)
 
@@ -29,12 +44,12 @@ $(NAME): $(OBJS)
 	@$(COMPRESS) $(NAME) $(OBJS)
 
 clean:
-	@$(RM) $(OBJS) 
+	@$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all fclean clean 
+.PHONY: all fclean clean re bonus
  

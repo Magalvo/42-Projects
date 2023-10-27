@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:16:58 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/24 12:28:17 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/27 14:35:08 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,10 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (count);
 }
-
-/* int	main()
+/*
+int	main()
 {
-	 int i = -42;
+	  int i = -42;
 	void *p = (int *)101010;
 	char c = 'c';
 	char s[] = "Stingrid";
@@ -126,11 +126,10 @@ int	ft_printf(const char *s, ...)
 	count1 = printf("Hexa address :%X:\n", x);
 	count2 = ft_printf("Hexa address :%X:\n", x);
 	printf("Original count: %d, My count: %d\n\n", count1, count2);
-
-	// %% (Percentage OF %)
-	count1 = printf("This is This :% .ca:\n");
-	count2 = ft_printf("This is This :% .ca:\n");
-	printf("Original count: %d, My count: %d\n\n", count1, count2);
+ 
+	ft_printf("testing my code %d %x\n", (long)INT_MAX + 1, 12357485);
+	ft_printf("testing my code %d %x\n\n", INT_MIN, 12357485);
+	
 	return (0);
 } 
   */

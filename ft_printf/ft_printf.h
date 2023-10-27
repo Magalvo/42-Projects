@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 12:16:56 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/10/24 11:24:00 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/10/27 14:13:37 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include "libft/libft.h"
 # include <stdarg.h>
 # include <stdint.h>
+# include <limits.h>
 
 int	ft_printf(const char *s, ...);	
 int	ft_form(char *s, int *i, va_list args);
