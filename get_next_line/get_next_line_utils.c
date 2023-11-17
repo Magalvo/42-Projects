@@ -6,13 +6,12 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:40:01 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/11/14 16:15:05 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:37:46 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-/* size of the string*/
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -24,13 +23,6 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-/* ---------------String Join---------------------/
-* Keeps joining *s1 & *s2 till \n is found		 *
-* 2 counters -> strlen of s1 and then add in	 *
-*				front of the other	             *
-*  finaly frees s1 since new is now the hole     *
-*  string and returns new                        *
-/------------------------------------------------ */
 
 char	*ft_strjoin(char *s1, char *s2)
 {
@@ -60,7 +52,6 @@ char	*ft_strjoin(char *s1, char *s2)
 		free(s1);
 	return (new);
 }
-/*Clean the given buffer*/
 
 void	ft_clean_buf(char *buffer)
 {

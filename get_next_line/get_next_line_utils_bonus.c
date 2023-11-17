@@ -6,11 +6,11 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:49:55 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/11/08 11:43:02 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:35:13 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_strlen(char *str)
 {
@@ -32,24 +32,23 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	new = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!new)
+	{
+		free(s1);
 		return (NULL);
+	}
 	i = 0;
 	while (s1 && s1[i])
 	{
 		new[i] = s1[i];
 		i++;
 	}
-	j = 0;
-	while (s2[j] != '\n' && s2[j])
-	{
+	j = -1;
+	while ((++j >= 0) && s2[j] != '\n' && s2[j])
 		new[i + j] = s2[j];
-		j++;
-	}
 	if (s2[j] == '\n')
 		new[i + j++] = '\n';
 	new[i + j] = '\0';
-	if (s1)
-		free(s1);
+	free(s1);
 	return (new);
 }
 

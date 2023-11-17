@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:49:58 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/11/07 13:40:17 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:15:22 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # ifndef FOPEN_MAX
 #  define FOPEN_MAX 16
-# endif
+# endif 
 
 # include <fcntl.h>
 # include <stdio.h>
