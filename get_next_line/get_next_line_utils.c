@@ -6,7 +6,7 @@
 /*   By: dde-maga <dde-maga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 12:40:01 by dde-maga          #+#    #+#             */
-/*   Updated: 2023/11/17 17:37:46 by dde-maga         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:40:17 by dde-maga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,10 @@ void	ft_clean_buf(char *buffer)
 		i++;
 		while (i < BUFFER_SIZE)
 		{
-			buffer[j++] = buffer[i];
-			buffer[i++] = '\0';
+			buffer[j] = buffer[i];
+			buffer[i] = '\0';
+			i++;
+			j++;
 		}
 	}
 }
